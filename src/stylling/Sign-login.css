@@ -1,0 +1,41 @@
+#sign-up-card {
+    background-color: #26502D;
+}
+
+.sign-login-header {
+    margin-top: 3%;
+    color: #FC7614;
+    font-size: x-large;
+    margin-left: 7%;
+}
+
+.sign-login-input {
+    border-radius: 20px !important;
+    height: 2rem !important;
+    width: 80% !important;
+    margin-left: 7% !important;
+    padding: 4% !important;
+    display: inline !important;
+}
+
+.sign-login-btn {
+    background-color: #FC7614;
+    width: 25%;
+    padding: 2% 3%;
+    border-style: none;
+    border-radius: 20px;
+    margin: 4% 0% 2% 62%;
+    color: aliceblue;
+    font-size: large;
+}
+
+.showPass {
+    display: inline;
+    color: rgb(127, 127, 127);
+    font-size: large;
+    margin-left: -7%;
+    cursor: pointer;
+}
+#sign-up-img{
+    margin-top: 12%;
+}

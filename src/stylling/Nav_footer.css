@@ -1,0 +1,62 @@
+#Nav-Word{
+    font-size: larger;
+     margin-left: 9%;
+     padding-top: 1% !important;
+    color: #396B41;
+    text-decoration: none;
+    margin-bottom: 1%;
+    border-bottom: solid 2px white;
+   
+}
+#Nav-Word:hover{
+    border-bottom: solid 2px #CF5814;
+
+}
+
+#Create-Account-Nav{
+    background-color: black;
+    color: whitesmoke;
+    font-size: larger;
+     margin-left: 8%;
+     border-radius:20px ;
+     padding: 1% 2% !important;
+     text-decoration: none;
+    }
+.nav-img{
+    width:7%;
+}
+/*Footer*/
+.section-Footer{
+    background-color:  #E9E8E8;
+    margin-top: 5%;
+    align-items: center;
+    color:#868383;
+    font-size:medium;
+}
+.footer-img{
+    width: 30%;
+}
+.footer-icons{
+    font-size: x-large;
+    
+    display: inline;
+    
+}
+.footer-p{
+    display: inline;
+   
+}
+.footer-title{
+    color:#396B41;
+    font-size: xx-large;
+    margin-left: 2%;
+    margin-top: 10%;
+}
+.footer-Links{
+    color:#615f5f ;
+    text-decoration: none;
+    margin-left: 4%;
+    font-size: larger;
+    display: block  ;
+
+}

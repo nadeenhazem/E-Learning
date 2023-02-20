@@ -1,0 +1,75 @@
+#Home-BackGround{
+    background-color: #26502D ;
+    margin-top: -1%;
+    border-radius: 20px;
+    color:aliceblue;
+    margin-left: -5%;
+}
+.Home-Title{
+    margin-left: 10%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 10%;
+}
+.Home-p{
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+.Home-Search{
+    margin-left: 10%;
+    width:70%;
+    
+}
+
+.Home-Search-Btn{
+    background-color: #FC7614;
+    color: aliceblue;
+    margin-left: -17%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-style: none;
+    padding: 2% 5%;
+    border-radius: 10px;
+}
+#Home-img{
+   
+    width:150%;
+    margin-top:8%;
+}
+/*Working Process*/
+#Working-main-dev{
+    text-align: center;
+    color:#26502D
+    
+}
+.Working-Title{
+    font-size: xx-large;
+}
+.Working-p{
+    color:#615f5f;
+    padding: 0% 10%;
+}
+.Working-icon{
+    font-size: 600%;
+    color:whitesmoke;
+    padding: 5%;   
+    background-color: #26502D;
+    border-radius: 10px;
+}
+/********************Contact Us******************/
+#contact-us-input{
+    width: 50%;
+    margin: 3% auto;
+}
+.contact-us-btn{
+    background-color: #FC7614;
+    border-style: none;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: large;
+    padding: 1% 2%;
+
+}
+
+
+
