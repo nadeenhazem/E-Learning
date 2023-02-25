@@ -11,6 +11,9 @@ function SignUp(props) {
     const [isShown, setIsSHown] = useState(false);
     const [isShownC, setIsSHownC] = useState(false);
 
+    const [saveAccess, setSaveAccess] = useState([]);
+    localStorage.setItem('Login', JSON.stringify(saveAccess))
+
     const togglePassword = () => {
         setIsSHown((isShown) => !isShown);
     };
@@ -27,14 +30,14 @@ function SignUp(props) {
         name: '',
         email: '',
         password: '',
-        confirm:'',
+        confirm: '',
 
     })
     const [errors, setErrors] = useState({
         nameErr: null,
         emailErr: null,
         passwordErr: null,
-        confirmErr:null,
+        confirmErr: null,
     })
 
     const changeData = (e) => {
@@ -92,9 +95,19 @@ function SignUp(props) {
     }
     const handleChange = (e) => {
         e.preventDefault();
-        dispatch(AddNewData(signupUser))
-        window.location.href='/login'
+
+        signupUser.email.length === 0 || signupUser.password.length === 0 || signupUser.name.length === 0
+            || signupUser.confirm.length === 0 ?
+            window.location.href = '/signup' :
+            CallRigthData()
     }
+    const CallRigthData=()=>{
+        dispatch(AddNewData(signupUser))
+       const  Accessarr = [signupUser.email, signupUser.password]
+        setSaveAccess(saveAccess => saveAccess = Accessarr)
+        window.location.href = '/'
+    }
+    console.log(signupUser.email.length)
     return (
         <section >
             <div className="container py-5 h-100">
@@ -132,12 +145,12 @@ function SignUp(props) {
                                             </div>
                                             <div className="form-floating mb-3">
                                                 <p className='sign-login-header'>Confirm Password</p>
-                                                <input type={isShownC ? "text" : "password"} className="form-control sign-login-input" 
-                                                 onChange={(e) => changeData(e)}
-                                                 name="confirm" />
+                                                <input type={isShownC ? "text" : "password"} className="form-control sign-login-input"
+                                                    onChange={(e) => changeData(e)}
+                                                    name="confirm" />
                                                 {isShownC ? <BsEye onClick={togglePasswordC} className='showPass' />
                                                     : <BsEyeSlash onClick={togglePasswordC} className='showPass' />}
-                                                                                                    <p className="text-danger" style={{ marginLeft: '7%' }}> {errors.confirmErr} </p>
+                                                <p className="text-danger" style={{ marginLeft: '7%' }}> {errors.confirmErr} </p>
 
 
                                             </div>
@@ -147,8 +160,8 @@ function SignUp(props) {
                                                 <button className="sign-login-btn" type="submit"
                                                     onClick={handleChange}
                                                     disabled={errors.emailErr || errors.passwordErr
-                                                        ||errors.nameErr||errors.confirmErr}
-                                                    >Sign up</button>
+                                                        || errors.nameErr || errors.confirmErr}
+                                                >Sign up</button>
 
                                             </div>
 
@@ -162,7 +175,7 @@ function SignUp(props) {
 
                                 <div className="col-md-6 col-lg-6  d-md-block" >
                                     <img src='https://i.ibb.co/Q9G5ZfL/signupimg.png'
-                                        alt="login form" className="img-fluid" id='sign-up-img'/>
+                                        alt="login form" className="img-fluid" id='sign-up-img' />
                                 </div>
 
                             </div>

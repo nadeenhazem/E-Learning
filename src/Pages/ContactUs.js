@@ -2,8 +2,6 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Form from 'react-bootstrap/Form';
 function ContactUs(props) {
-    const getAccess = JSON.parse(localStorage.getItem('Login'));
-    console.log('contact', getAccess);
     const form = useRef();
 
     const sendEmail = (e) => {

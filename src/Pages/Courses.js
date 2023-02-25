@@ -15,6 +15,7 @@ function Courses(props) {
     }, [dispatch])
     const GetCourseData = CourseData.data;
     return (
+        GetCourseData === null||GetCourseData.length===0?null:
         <section >
         <div className="container py-5 h-100" >
             <div className='Courses-header-dev'>

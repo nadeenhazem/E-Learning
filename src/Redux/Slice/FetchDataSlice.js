@@ -5,7 +5,7 @@ import axios from "axios";
 export const fetchData=createAsyncThunk(
     'FetchData',
     async(LinkData)=>{
-        const response= await axios.get(`http://localhost:3500/${LinkData}`);
+        const response= await axios.get(`https://e-learning-7wsy.onrender.com/${LinkData}`);
         return response.data
         
     }

@@ -4,6 +4,7 @@ import {MDBCard,MDBCardImage,MDBCardTitle,MDBCardText,MDBCol} from 'mdb-react-ui
   import { Link } from 'react-router-dom';
   function CoursesCard(props) {
     return (
+      
         <MDBCol >
             <MDBCard className='h-100' id='course-card' >
               <MDBCardImage

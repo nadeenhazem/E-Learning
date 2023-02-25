@@ -16,7 +16,6 @@ function CourseLessons(props) {
 
     const Lessons = OneCourseAllData.AllLessons;
 
-console.log(Lessons)
 const Navigate=useNavigate();
     const PageOneLesson=(Data)=>{
         Navigate('/oneCourse',
@@ -29,6 +28,7 @@ const Navigate=useNavigate();
         setLessonsIsSHown((LessonsisShown) => !LessonsisShown);
     };
     return (
+        OneCourseAllData === null||OneCourseAllData.length===0?null:
         <section className='section-Courses-Lessons'>
             <div className="container py-5 h-100" >
 

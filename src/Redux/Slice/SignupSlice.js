@@ -6,7 +6,7 @@ export const AddNewData=createAsyncThunk(
     async(Newdata)=>{
         const ConfigData={
             method:'POST',
-            url:`http://localhost:3500/Users`,
+            url:`https://e-learning-7wsy.onrender.com/Users`,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -34,15 +34,19 @@ export const SignupSlice=createSlice({
     },
     extraReducers:(builder)=>{
         builder.addCase(AddNewData.fulfilled,(state, payload)=>{
+            state.data=payload;
+            state.status='success'
             console.log('success')
 
         })
         builder.addCase(AddNewData.pending,(state)=>{
-            // console.log('loading')
+            state.status='loading'
+            
 
         })
         builder.addCase(AddNewData.rejected,(state)=>{
-            // console.log('failed')
+            state.status='failed'
+            
 
         })
     },

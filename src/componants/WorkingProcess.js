@@ -27,7 +27,6 @@ function WorkingProcess(props) {
                                 <div className="col-md-6 col-lg-4  d-md-block" >
                                 <div className="card-body p-2 p-lg-2"style={{marginTop:'8%'}}>
                                         <FiBookmark className='Working-icon'/>
-                                        {/* <img src='https://i.ibb.co/Twxq46t/certificate.png'className='Working-icon'/> */}
                                        <p className='Working-Title'>Book Your Seat</p>
                                         <p className='Working-p'>We Have helped over 2,300 New Students to get into the most popular tech team</p>
 

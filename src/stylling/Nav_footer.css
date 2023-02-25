@@ -25,6 +25,15 @@
 .nav-img{
     width:7%;
 }
+.Category-Links{
+    text-decoration: none;
+    color: #232323;
+    font-size:90%;
+    margin-left: 1%;  
+}
+.Category-Links:hover{
+    color: #396B41;
+}
 /*Footer*/
 .section-Footer{
     background-color:  #E9E8E8;

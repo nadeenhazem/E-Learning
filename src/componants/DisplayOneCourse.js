@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player'
 import { useLocation } from 'react-router-dom';
 import '../stylling/Courses.css';
-import { MDBRow } from 'mdb-react-ui-kit';
 
 function DisplayOneCourse(props) {
     const location1 = useLocation()

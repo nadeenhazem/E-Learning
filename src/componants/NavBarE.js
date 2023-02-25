@@ -8,7 +8,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBarE() {
   const getAccess=JSON.parse(localStorage.getItem('Login'));
-  console.log(getAccess);
 
   const LogOut=()=>{
     localStorage.clear('Login');
@@ -25,20 +24,22 @@ function NavBarE() {
           <Nav className="me-auto" style={{width:'100%'}}>
 
             <Link to="/" id='Nav-Word'>Home</Link>
-           
+
             <Link to={ getAccess===null||getAccess.length===0?"/login":"/courses" }
             id='Nav-Word'>Courses</Link>
             <Link to={getAccess===null||getAccess.length===0?"/login":"/contactus"} id='Nav-Word'style={{marginRight:'5%'}}>Contact Us</Link>
             <NavDropdown title="Categories" id='Nav-Word'style={{paddingTop:'1%'}}>
-              <NavDropdown.Item href={getAccess===null||getAccess.length===0?"/login":'/category/Ui-Ux'}>UI/UX</NavDropdown.Item>
-              
-              <NavDropdown.Item href={getAccess===null||getAccess.length===0?"/login":"/category/Frontend Development"}>
-              Frontend Development
-              </NavDropdown.Item>
-             
-              <NavDropdown.Item href={getAccess===null||getAccess.length===0?"/login":"/category/BackEnd Development"}>BackEnd Development</NavDropdown.Item>
+              <Link to={getAccess===null||getAccess.length===0?"/login":'/category/Ui-Ux'} className='Category-Links'>UI/UX</Link>
               <NavDropdown.Divider />
-              <NavDropdown.Item href={getAccess===null||getAccess.length===0?"/login":"/category/other"}>Other</NavDropdown.Item>
+              <Link to={getAccess===null||getAccess.length===0?"/login":"/category/Frontend Development"}className='Category-Links'>
+              Frontend Development
+              </Link>
+              <NavDropdown.Divider />
+              <Link to={getAccess===null||getAccess.length===0?"/login":"/category/BackEnd Development"}className='Category-Links'>
+                BackEnd Development</Link>
+              <NavDropdown.Divider />
+              <Link to={getAccess===null||getAccess.length===0?"/login":"/category/other"}className='Category-Links'>
+                Other</Link>
               
               
             </NavDropdown>
